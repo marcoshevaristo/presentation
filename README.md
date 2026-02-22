@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Self Presentation
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and Bun.
 
-First, run the development server:
+## 🚀 Features
+
+- **Next.js 16** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS v4** for styling
+- **Bun** as the runtime and package manager
+- **Responsive Design** - Works on all devices
+- **Dark Mode** support
+- **Smooth Scrolling** navigation
+- **SEO Optimized**
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Install dependencies using Bun
+bun install
+```
+
+## 🛠️ Development
+
+```bash
+# Start the development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+.
+├── app/
+│   ├── layout.tsx       # Root layout with metadata
+│   ├── page.tsx         # Homepage
+│   └── globals.css      # Global styles
+├── components/
+│   ├── Header.tsx       # Navigation header
+│   ├── Hero.tsx         # Hero section
+│   ├── About.tsx        # About section
+│   ├── Projects.tsx     # Projects showcase
+│   ├── Skills.tsx       # Skills section
+│   ├── Contact.tsx      # Contact form
+│   └── Footer.tsx       # Footer
+└── public/              # Static assets
+```
 
-## Learn More
+## ✏️ Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Edit [app/layout.tsx](app/layout.tsx)** - Update metadata (title, description)
+2. **Edit [components/Hero.tsx](components/Hero.tsx)** - Update your name and tagline
+3. **Edit [components/About.tsx](components/About.tsx)** - Update your bio
+4. **Edit [components/Projects.tsx](components/Projects.tsx)** - Add your projects
+5. **Edit [components/Skills.tsx](components/Skills.tsx)** - Update your skills
+6. **Edit [components/Contact.tsx](components/Contact.tsx)** - Update social links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Add Your Own Styling
 
-## Deploy on Vercel
+All components use Tailwind CSS. Modify the classes in each component file or update [app/globals.css](app/globals.css) for global styles.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Build for Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Create an optimized production build
+bun run build
+
+# Start the production server
+bun start
+```
+
+## 📝 Scripts
+
+- `bun dev` - Start development server
+- `bun build` - Build for production
+- `bun start` - Start production server
+- `bun lint` - Run Biome linter
+- `bun format` - Format code with Biome
+
+## 🚀 Deployment
+
+### Deploy on Vercel
+
+The easiest way to deploy:
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com/new)
+3. Vercel will automatically detect Next.js and configure the build
+4. Your site will be live!
+
+### Deploy on Other Platforms
+
+This is a standard Next.js app and can be deployed on:
+- Netlify
+- Cloudflare Pages
+- Railway
+- Render
+- Any platform that supports Node.js or Bun
+
+## 🛠️ Technologies Used
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Bun](https://bun.sh/)
+- [Biome](https://biomejs.dev/) - Fast linter and formatter
+
+## 📄 License
+
+Feel free to use this template for your own portfolio!
+
+---
+
+Built with ❤️ using Next.js and Bun
