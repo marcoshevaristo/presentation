@@ -1,24 +1,33 @@
 const projects = [
     {
-        title: "Project One",
-        description: "A full-stack web application built with Next.js and TypeScript. Features include authentication, real-time updates, and a modern UI.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-        liveUrl: "#",
-        githubUrl: "#",
+        title: "Equipment fleet manager",
+        description: "A SaaS application for managing a fleet of equipment, including display of market valuation for retail, wholesale and auction, inventory management, insights and more. Client is a leading company in North America in the equipment auction market.",
+        technologies: ["Angular", "Angular Material", "Chart.js", "Python", "Postgres"],
     },
     {
-        title: "Project Two",
-        description: "An e-commerce platform with payment integration, inventory management, and admin dashboard.",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-        liveUrl: "#",
-        githubUrl: "#",
+        title: "SaaS platform for company administration",
+        description: "A SaaS platform for company administration, including user management, analytics, payroll and more.",
+        technologies: ["Java", "Spring", "Angular", "TypeScript", "Postgres"],
     },
     {
-        title: "Project Three",
-        description: "A mobile-first progressive web app for task management with offline capabilities.",
-        technologies: ["Next.js", "PWA", "IndexedDB", "Service Workers"],
-        liveUrl: "#",
-        githubUrl: "#",
+        title: "Logistics web application",
+        description: "A platform for logistics management, including real-time tracking, price and delivery time estimation using integration with client external API. Handcrafted for a leading logistics company in Brazil.",
+        technologies: ["Vue.js", "PrimeVue", "TailwindCSS", "Node.js", "MongoDB"],
+    },
+    {
+        title: "Company risk management system",
+        description: "A system for managing company risks, including risk assessment, mitigation planning and monitoring. Client is a leading company in the enterprise safety and security industry, based in Switzerland.",
+        technologies: ["Vue.js", "PrimeVue", "TailwindCSS", "Node.js", "MongoDB"],
+    },
+    {
+        title: "Application for production line management",
+        description: "Internal application for production line management, including inventory control, customer and partners management and many more. Built with development speed as primary goal with tight deadlines and constant changes in requirements, I built a page constructor engine that reads JSON files from the backend and renders the pages based on that, with multiple complex condition logic and reusable components. Client is a global giant in the food industry.",
+        technologies: ["Angular", "PrimeNG", "C# .NET", "SQL Server"],
+    },
+    {
+        title: "Mobile app for selling/delivery",
+        description: "Mobile app used for registering sales and deliveries, with features such as inventory management, customer management, delivery tracking, API integration for payment with credit card and more. Client is reference in kitchen gas distribution in its region in Brazil.",
+        technologies: ["React Native", "Redux", "Material UI"],
     },
 ];
 
@@ -29,6 +38,9 @@ export default function Projects() {
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
                     My Projects
                 </h2>
+                <p className="max-w-3xl mx-auto text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-12">
+                    Most of my projects up to this point have been corporate projects that can't be publically shared, so I can't share images, links or details about them. However, here are some descriptions of some projects I've worked on and the technologies I've used. I'm always eager to take on new challenges and expand my portfolio with exciting projects in the future!
+                </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {projects.map((project, index) => (
                         <div
@@ -48,24 +60,6 @@ export default function Projects() {
                                         {tech}
                                     </span>
                                 ))}
-                            </div>
-                            <div className="flex gap-4">
-                                <a
-                                    href={project.liveUrl}
-                                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Live Demo →
-                                </a>
-                                <a
-                                    href={project.githubUrl}
-                                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub →
-                                </a>
                             </div>
                         </div>
                     ))}
