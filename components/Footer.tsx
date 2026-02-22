@@ -1,5 +1,5 @@
 interface Props {
-    currentYear: number;
+    currentYear?: number;
 }
 
 export default function Footer(props: Props) {
