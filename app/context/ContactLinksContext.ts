@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 export interface IContactLinksContext {
   linkedin: string | null;
@@ -9,5 +9,5 @@ export interface IContactLinksContext {
 export const ContactLinksContext = createContext<IContactLinksContext>({
   linkedin: null,
   whatsapp: null,
-  email: null
-})
+  email: null,
+});
