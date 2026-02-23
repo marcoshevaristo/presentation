@@ -35,6 +35,8 @@ export default function Contact() {
               <Image
                 src="/linkedin-icon.svg"
                 alt="LinkedIn"
+                width={48}
+                height={48}
                 className="bg-white w-12 h-12 rounded-sm"
               />
             </a>
@@ -42,6 +44,8 @@ export default function Contact() {
               <Image
                 src="/whatsapp-icon.svg"
                 alt="WhatsApp"
+                width={48}
+                height={48}
                 className="bg-white w-12 h-12 p-1 rounded-sm"
               />
             </a>
