@@ -1,3 +1,5 @@
+'use client';
+
 import { UsersIcon, MoneyIcon } from '@phosphor-icons/react';
 
 const projects = [
@@ -101,7 +103,7 @@ export default function Projects() {
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={`${project.title}-${tech}-${techIndex}`}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm"
                   >
                     {tech}
                   </span>

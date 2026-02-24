@@ -1,11 +1,12 @@
-'use client';
-
 import Image from 'next/image';
-import { useContext } from 'react';
-import { ContactLinksContext } from '@/app/context/ContactLinksContext';
+
+const contactLinks = {
+  linkedin: 'https://www.linkedin.com/in/marcos-evaristo-a2497393/',
+  whatsapp: 'https://wa.me/+55999400403',
+  email: 'marcosh.evaristo15@gmail.com',
+};
 
 export default function Contact() {
-  const { linkedin, whatsapp, email } = useContext(ContactLinksContext);
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
@@ -19,7 +20,7 @@ export default function Contact() {
           </p>
           <div className="flex justify-center gap-6">
             <a
-              href={email ? `mailto:${email}` : '#'}
+              href={contactLinks.email ? `mailto:${contactLinks.email}` : '#'}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -31,7 +32,11 @@ export default function Contact() {
                 className="bg-white w-12 h-12 rounded-sm"
               />
             </a>
-            <a href={linkedin || '#'} target="_blank" rel="noopener noreferrer">
+            <a
+              href={contactLinks.linkedin || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/linkedin-icon.svg"
                 alt="LinkedIn"
@@ -40,7 +45,11 @@ export default function Contact() {
                 className="bg-white w-12 h-12 rounded-sm"
               />
             </a>
-            <a href={whatsapp || '#'} target="_blank" rel="noopener noreferrer">
+            <a
+              href={contactLinks.whatsapp || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/whatsapp-icon.svg"
                 alt="WhatsApp"
