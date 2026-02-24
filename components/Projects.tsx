@@ -1,6 +1,6 @@
 'use client';
 
-import { UsersIcon, MoneyIcon } from '@phosphor-icons/react';
+import { MoneyIcon, UsersIcon } from '@phosphor-icons/react';
 
 const projects = [
   {
