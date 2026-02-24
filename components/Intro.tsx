@@ -11,7 +11,7 @@ export default function Hero() {
     // Stage 1: Fade in text (starts immediately)
     const timer1 = setTimeout(() => setAnimationStage(1), 100);
     // Stage 2: Fade in photo
-    const timer2 = setTimeout(() => setAnimationStage(2), 1000);
+    const timer2 = setTimeout(() => setAnimationStage(2), 500);
 
     return () => {
       clearTimeout(timer1);
@@ -69,8 +69,8 @@ export default function Hero() {
           <div
             className={`flex-shrink-0 transition-all duration-1000 ease-out ${
               animationStage >= 2
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-0 translate-x-8'
+                ? 'opacity-100 lg:translate-x-0'
+                : 'opacity-0 lg:translate-x-8'
             } ${animationStage < 1 ? 'hidden' : 'block'}`}
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
@@ -84,6 +84,7 @@ export default function Hero() {
                   className="object-cover"
                   priority
                   sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
+                  fetchPriority="high"
                 />
               </div>
             </div>
