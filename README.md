@@ -13,9 +13,9 @@ A modern, responsive portfolio website built with Next.js 16, TypeScript, Tailwi
 - **Smooth Scrolling** navigation
 - **SEO Optimized**
 
-## Lighthouse Profiling
+## 💡 Lighthouse Profiling
 
-![alt text](image-1.png)
+![Chrome lighthous profiling results](lighthouse-profiling.png)
 
 ## 📦 Installation
 
