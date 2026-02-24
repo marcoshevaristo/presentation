@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Header() {
@@ -18,9 +17,7 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-zinc-200 dark:border-zinc-800">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">
-            Portfolio
-          </Link>
+          <span className="text-2xl font-bold">Portfolio</span>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8">
