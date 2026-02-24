@@ -8,13 +8,19 @@ const contactLinks = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" data-testid="contact-section" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2
+          data-testid="contact-title"
+          className="text-4xl md:text-5xl font-bold text-center mb-12"
+        >
           Get In Touch
         </h2>
         <div className="max-w-2xl mx-auto">
-          <p className="text-center text-zinc-600 dark:text-zinc-400 mb-8 text-lg">
+          <p
+            data-testid="contact-description"
+            className="text-center text-zinc-600 dark:text-zinc-400 mb-8 text-lg"
+          >
             Have a project in mind or want to collaborate? Feel free to reach
             out!
           </p>
@@ -23,6 +29,7 @@ export default function Contact() {
               href={contactLinks.email ? `mailto:${contactLinks.email}` : '#'}
               target="_blank"
               rel="noopener noreferrer"
+              data-testid="contact-email"
             >
               <Image
                 src="/email-icon.svg"
@@ -36,6 +43,7 @@ export default function Contact() {
               href={contactLinks.linkedin || '#'}
               target="_blank"
               rel="noopener noreferrer"
+              data-testid="contact-linkedin"
             >
               <Image
                 src="/linkedin-icon.svg"
@@ -49,6 +57,7 @@ export default function Contact() {
               href={contactLinks.whatsapp || '#'}
               target="_blank"
               rel="noopener noreferrer"
+              data-testid="contact-whatsapp"
             >
               <Image
                 src="/whatsapp-icon.svg"

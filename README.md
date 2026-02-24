@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site in your bro
 │   └── globals.css      # Global styles
 ├── components/
 │   ├── Header.tsx       # Navigation header
-│   ├── Hero.tsx         # Hero section
+│   ├── Intro.tsx        # Intro section
 │   ├── About.tsx        # About section
 │   ├── Projects.tsx     # Projects showcase
 │   ├── Skills.tsx       # Skills section
@@ -57,7 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site in your bro
 ### Update Personal Information
 
 1. **Edit [app/layout.tsx](app/layout.tsx)** - Update metadata (title, description)
-2. **Edit [components/Hero.tsx](components/Hero.tsx)** - Update your name and tagline
+2. **Edit [components/Intro.tsx](components/Intro.tsx)** - Update your name and tagline
 3. **Edit [components/About.tsx](components/About.tsx)** - Update your bio
 4. **Edit [components/Projects.tsx](components/Projects.tsx)** - Add your projects
 5. **Edit [components/Skills.tsx](components/Skills.tsx)** - Update your skills

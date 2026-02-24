@@ -76,12 +76,18 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" data-testid="projects-section" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2
+          data-testid="projects-title"
+          className="text-4xl md:text-5xl font-bold text-center mb-12"
+        >
           My Projects
         </h2>
-        <p className="max-w-3xl mx-auto text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-12">
+        <p
+          data-testid="projects-intro"
+          className="max-w-3xl mx-auto text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-12"
+        >
           Most of my projects up to this point have been corporate projects that
           can't be publicly shared, so I can't share images, links or details
           about them. However, here are some descriptions of some projects I've
@@ -93,25 +99,41 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={`${project.title}-${index}`}
+              data-testid={`project-card-${index}`}
               className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900 flex flex-col"
             >
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+              <h3
+                data-testid={`project-title-${index}`}
+                className="text-2xl font-bold mb-3"
+              >
+                {project.title}
+              </h3>
+              <p
+                data-testid={`project-${index}-description`}
+                className="text-zinc-600 dark:text-zinc-400 mb-4"
+              >
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={`${project.title}-${tech}-${techIndex}`}
+                    data-testid={`project-${index}-tech-${techIndex}`}
                     className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-end flex-1 text-sm text-zinc-500 dark:text-zinc-500">
+              <div
+                data-testid={`project-${index}-stats`}
+                className="flex justify-between items-end flex-1 text-sm text-zinc-500 dark:text-zinc-500"
+              >
                 {project.companyAnnualRevenue && project.revenueCurrency && (
-                  <span className="flex items-center gap-1">
+                  <span
+                    data-testid={`project-${index}-revenue`}
+                    className="flex items-center gap-1"
+                  >
                     <MoneyIcon />~
                     {new Intl.NumberFormat('en-US', {
                       style: 'currency',
@@ -122,7 +144,10 @@ export default function Projects() {
                   </span>
                 )}
                 {project.usersCount && (
-                  <span className="flex items-center gap-1">
+                  <span
+                    data-testid={`project-${index}-users`}
+                    className="flex items-center gap-1"
+                  >
                     <UsersIcon />
                     {`~${project.usersCount.toLocaleString()} users`}
                   </span>
@@ -131,7 +156,10 @@ export default function Projects() {
             </div>
           ))}
         </div>
-        <div className="max-w-6xl mx-auto mt-4 text-sm text-zinc-500 dark:text-zinc-500">
+        <div
+          data-testid="projects-footer-note"
+          className="max-w-6xl mx-auto mt-4 text-sm text-zinc-500 dark:text-zinc-500"
+        >
           <span>*Company annual revenue in their respective currency</span>
         </div>
       </div>

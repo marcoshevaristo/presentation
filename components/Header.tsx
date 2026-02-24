@@ -14,17 +14,26 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-zinc-200 dark:border-zinc-800">
-      <nav className="container mx-auto px-6 py-4">
+    <header
+      data-testid="header"
+      className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-zinc-200 dark:border-zinc-800"
+    >
+      <nav data-testid="nav" className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold">Portfolio</span>
+          <span data-testid="logo" className="text-2xl font-bold">
+            Portfolio
+          </span>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul
+            data-testid="desktop-nav"
+            className="hidden md:flex items-center gap-8"
+          >
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
+                  data-testid={`nav-link-${item.name.toLowerCase()}`}
                   className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {item.name}
@@ -36,6 +45,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
+            data-testid="mobile-menu-button"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -62,11 +72,12 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <ul className="md:hidden mt-4 space-y-4">
+          <ul data-testid="mobile-nav" className="md:hidden mt-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
+                  data-testid={`mobile-nav-link-${item.name.toLowerCase()}`}
                   className="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function Hero() {
+export default function Intro() {
   const [animationStage, setAnimationStage] = useState(0);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export default function Hero() {
   return (
     <section
       id="home"
+      data-testid="intro-section"
       className="min-h-screen flex items-center justify-center pt-20"
     >
       <div className="container mx-auto px-6">
@@ -34,13 +35,22 @@ export default function Hero() {
               animationStage >= 1 ? 'lg:translate-x-[-20%]' : 'lg:translate-x-0'
             }`}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1
+              data-testid="intro-title"
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
               Hi, I'm Marcos Evaristo
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-700 dark:text-zinc-300 mb-8">
+            <p
+              data-testid="intro-subtitle"
+              className="text-xl md:text-2xl text-zinc-700 dark:text-zinc-300 mb-8"
+            >
               Full Stack Developer | Frontend specialist | Problem Solver
             </p>
-            <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-12 max-w-2xl">
+            <p
+              data-testid="intro-description"
+              className="text-lg text-zinc-700 dark:text-zinc-300 mb-12 max-w-2xl"
+            >
               I build beautiful, performant web applications with modern
               technologies. Passionate about creating seamless user experiences
               and writing clean code.
@@ -52,12 +62,14 @@ export default function Hero() {
             >
               <a
                 href="#projects"
+                data-testid="view-work-button"
                 className="px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-medium flex items-center"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
+                data-testid="get-in-touch-button"
                 className="px-8 py-4 border-2 border-zinc-300 dark:border-zinc-700 rounded-full hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-medium flex items-center"
               >
                 Get In Touch
@@ -67,6 +79,7 @@ export default function Hero() {
 
           {/* Photo */}
           <div
+            data-testid="profile-photo"
             className={`flex-shrink-0 transition-all duration-1000 ease-out ${
               animationStage >= 2
                 ? 'opacity-100 lg:translate-x-0'
