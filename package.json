@@ -37,7 +37,7 @@
   ],
   "lint-staged": {
     "*.{ts,tsx}": [
-      "bun run lint:fix && bun run lint"
+      "bun run lint"
     ]
   }
 }
