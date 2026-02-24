@@ -1,3 +1,5 @@
+import { UsersIcon, MoneyIcon } from '@phosphor-icons/react';
+
 const projects = [
   {
     title: 'Equipment fleet manager',
@@ -10,42 +12,57 @@ const projects = [
       'Python',
       'Postgres',
     ],
+    companyAnnualRevenue: 1200000000,
+    revenueCurrency: 'USD',
   },
   {
     title: 'SaaS platform for company administration',
     description:
-      'A SaaS platform for company administration, including user management, analytics, payroll and more.',
+      'A SaaS platform for company administration, including user management, analytics, payroll and more, representing over 20% of all payroll processing from CLT workers in Brazil with over 9MM payrolls across over 5,200 clients. Client is a leading company in the human resources industry in Brazil.',
     technologies: ['Java', 'Spring', 'Angular', 'TypeScript', 'Postgres'],
+    usersCount: 100000,
+    companyAnnualRevenue: 1000000000,
+    revenueCurrency: 'BRL',
   },
   {
     title: 'Logistics portal and fintech',
     description:
       'A web application for managing logistics operations and other business related features including a fintech for drivers and related parts to exchange credit and make payments. Client is a reference in the logistics industry in Brazil.',
     technologies: ['Angular', 'PrimeNG', 'ASP.NET'],
+    usersCount: 120000,
   },
   {
     title: 'Logistics tracking and estimate application',
     description:
-      'A platform for logistics management, including real-time tracking, price and delivery time estimation using integration with client external API. Handcrafted for a leading logistics company in Brazil.',
+      'A platform for logistics management, including real-time tracking, price and delivery time estimation using integration with client external API. Client is a leading logistics company in Brazil.',
     technologies: ['Vue.js', 'PrimeVue', 'TailwindCSS', 'Node.js', 'MongoDB'],
+    companyAnnualRevenue: 3000000000,
+    revenueCurrency: 'BRL',
   },
   {
     title: 'College monitored exam application',
     description:
-      'An application for students to take monitored exames remotely, with features such as webcam monitoring, AI-based cheating detection and more. The application was split into three parts, one for a worker to check on students documents and give instructions, one for the student to take the exam while with their webcam and microphone open, and one for a worker to monitor the exam process of up to 50 students simultaneously. Client is a reference in the education industry in Brazil.',
+      'An application for students to take monitored exams remotely, with features such as webcam monitoring, AI-based cheating detection and more. The application was split into three parts, one for a worker to check on students documents and give instructions, one for the student to take the exam while with their webcam and microphone open, and one for a worker to monitor the exam process of up to 50 students simultaneously. Client is a reference in the education industry in Brazil.',
     technologies: ['Angular', 'Node.js', 'Socket.IO', 'TensorFlow', 'WebRTC'],
-  },
-  {
-    title: 'Company risk management system',
-    description:
-      'A system for managing company risks, including risk assessment, mitigation planning and monitoring. Client is a leading company in the enterprise safety and security industry, based in Switzerland.',
-    technologies: ['Vue.js', 'PrimeVue', 'TailwindCSS', 'Node.js', 'MongoDB'],
+    usersCount: 200000,
+    companyAnnualRevenue: 1500000000,
+    revenueCurrency: 'BRL',
   },
   {
     title: 'Application for production line management',
     description:
       'Internal application for production line management, including inventory control, customer and partners management and many more. Built with development speed as primary goal with tight deadlines and constant changes in requirements, I built a page constructor engine that reads JSON files from the backend and renders the pages based on that, with multiple complex condition logic and reusable components. Client is a global giant in the food industry.',
     technologies: ['Angular', 'PrimeNG', 'C# .NET', 'SQL Server'],
+    companyAnnualRevenue: 70000000000,
+    revenueCurrency: 'USD',
+  },
+  {
+    title: 'Company risk management system',
+    description:
+      'A system for managing company risks, including risk assessment, mitigation planning and monitoring. Client is a leading company in the enterprise safety and security industry, based in Switzerland.',
+    technologies: ['Vue.js', 'PrimeVue', 'TailwindCSS', 'Node.js', 'MongoDB'],
+    companyAnnualRevenue: 140000000,
+    revenueCurrency: 'USD',
   },
   {
     title: 'Mobile app for selling/delivery',
@@ -64,7 +81,7 @@ export default function Projects() {
         </h2>
         <p className="max-w-3xl mx-auto text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-12">
           Most of my projects up to this point have been corporate projects that
-          can't be publically shared, so I can't share images, links or details
+          can't be publicly shared, so I can't share images, links or details
           about them. However, here are some descriptions of some projects I've
           worked on and the technologies I've used. I'm always eager to take on
           new challenges and expand my portfolio with exciting projects in the
@@ -74,7 +91,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={`${project.title}-${index}`}
-              className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900"
+              className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white dark:bg-zinc-900 flex flex-col"
             >
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
               <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -90,8 +107,30 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              <div className="flex justify-between items-end flex-1 text-sm text-zinc-500 dark:text-zinc-500">
+                {project.companyAnnualRevenue && project.revenueCurrency && (
+                  <span className="flex items-center gap-1">
+                    <MoneyIcon />~
+                    {new Intl.NumberFormat('en-US', {
+                      style: 'currency',
+                      currency: project.revenueCurrency,
+                      notation: 'compact',
+                    }).format(project.companyAnnualRevenue)}
+                    *
+                  </span>
+                )}
+                {project.usersCount && (
+                  <span className="flex items-center gap-1">
+                    <UsersIcon />
+                    {`~${project.usersCount.toLocaleString()} users`}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
+        </div>
+        <div className="max-w-6xl mx-auto mt-4 text-sm text-zinc-500 dark:text-zinc-500">
+          <span>*Company annual revenue in their respective currency</span>
         </div>
       </div>
     </section>

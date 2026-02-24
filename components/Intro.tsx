@@ -38,7 +38,7 @@ export default function Hero() {
               Hi, I'm Marcos Evaristo
             </h1>
             <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8">
-              Full Stack Developer | UI/UX Enthusiast | Problem Solver
+              Full Stack Developer | Frontend specialist | Problem Solver
             </p>
             <p className="text-lg text-zinc-500 dark:text-zinc-500 mb-12 max-w-2xl">
               I build beautiful, performant web applications with modern

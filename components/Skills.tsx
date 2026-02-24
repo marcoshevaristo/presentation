@@ -6,7 +6,7 @@ const skillCategories = [
       'React.js',
       'Next.js',
       'Vue.js',
-      'Javascript',
+      'JavaScript',
       'TypeScript',
       'TailwindCSS',
       'HTML/CSS',
