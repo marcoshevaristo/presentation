@@ -71,7 +71,7 @@ export default function Hero() {
               animationStage >= 2
                 ? 'opacity-100 lg:translate-x-0'
                 : 'opacity-0 lg:translate-x-8'
-            } ${animationStage < 1 ? 'hidden' : 'block'}`}
+            }`}
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full blur-2xl opacity-30"></div>
